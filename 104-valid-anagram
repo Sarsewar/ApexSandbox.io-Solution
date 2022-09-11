@@ -1,0 +1,28 @@
+public boolean isAnagram(String s1, String s2) {   
+    //Code here    
+    if(s1 == null || s2== null)
+        return false;
+    Integer[] alphabets = new Integer[26];
+    // 0th index represents 'a' and 25th index represents 'z'
+    // Array length is fixed as strings contain only lowercase.
+
+    for (Integer i = 0; i < 26; i++)
+        alphabets[i] = 0;
+
+    String startingChar = 'a';
+    Integer startingIndex = startingChar.getChars()[0];
+
+    for (Integer character : s1.getChars()){
+        alphabets[character - startingIndex]++; 
+        // character ascii minus 97 --> for example: b represented by 98 => 98-97 = 1st index.
+    }
+
+    for (Integer character : s2.getChars()){
+        alphabets[character - startingIndex]--;
+    }
+    for (Integer i = 0; i < 26; i++){
+        if (alphabets[i] != 0)
+            return false;
+    }
+    return true;
+}
