@@ -1,0 +1,16 @@
+public List<Integer> fibonacciSeries(Integer n) {
+   Integer fib = 1, fibPrevious = 1, temp = 1;
+   List<Integer> fibList = new List<Integer>();
+    for (Integer i=1; i<=n; i++) {
+        if(i <  3)
+        {
+            fibList.add(1);
+        }else{
+            temp = fibPrevious;
+            fibPrevious = fib;
+            fib = fib + temp;
+            fibList.add(fib);
+        }
+    }
+    return fibList;
+}
