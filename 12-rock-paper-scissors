@@ -1,0 +1,6 @@
+public Integer rockPaperScissors(String player1, String player2) {
+    //code here
+    if(player1 == player2)
+        return 0;
+    
+}
