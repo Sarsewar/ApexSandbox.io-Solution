@@ -1,0 +1,17 @@
+public Map<String, List<Case>> casesByType(List<Case> cases) {
+    //code here 
+    Map<String, List<Case>> typeVsCases = new Map<String, List<Case>>();
+    for(Case c : cases)
+    {
+        if(c.type == null)
+            continue;
+        List<Case> caseList = new List<Case>();
+        if(typeVsCases.containsKey(c.type))
+        {
+            caseList = typeVsCases.get(c.type);
+        }
+        caseList.add(c);
+        typeVsCases.put(c.type,caseList);
+    }   
+    return typeVsCases;
+}
