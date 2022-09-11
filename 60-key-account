@@ -1,0 +1,14 @@
+public Boolean isKeyAccount(Account a) {
+    //code here
+    Map<String,Integer> industryVsRevenue = new Map<String,Integer>();
+    industryVsRevenue.put('Banking', 600000);
+    industryVsRevenue.put('Technology', 800000);
+    industryVsRevenue.put('Retail', 2000000);
+    industryVsRevenue.put('All others', 500000);
+    
+    if(industryVsRevenue.get(a.Industry) != null &&  industryVsRevenue.get(a.Industry) > a.AnnualRevenue)
+        return false;
+    else if(industryVsRevenue.get('All others') > a.AnnualRevenue)
+        return false;
+    return true;
+}
