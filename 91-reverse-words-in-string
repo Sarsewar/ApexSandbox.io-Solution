@@ -1,0 +1,65 @@
+public static String reverseWords(String str){
+    //
+    List<String> words = str.split(' ');
+    Integer n = words.size();
+    String reverseString = '';
+    for (Integer i = 0; i < n; i++){
+        reverseString += reverseWord(words.get(i));
+        if (i != n - 1)
+            reverseString += ' ';
+    }
+    return reverseString;
+}
+
+public static String reverseWord(String str){
+
+    List<String> chars = str.split('');
+    Integer l = 0;
+    Integer r = chars.size() - 1;
+    String reverseString = '';
+    while (l < r){
+        String temp = chars.get(l);
+        chars.set(l, chars.get(r));
+        chars.set(r, temp);
+        l++;
+        r--;
+    }
+    for (String character : chars){
+        reverseString += character;
+    }
+    return reverseString;
+}
+
+/*
+public static String reverseWords(String str){
+    //
+    List<String> words = str.split(' ');
+    Integer n = words.size();
+    String reverseString = '';
+    for (Integer i = 0; i < n; i++){
+        reverseString += reverseWord(words.get(i));
+        if (i != n - 1)
+            reverseString += ' ';
+    }
+    return reverseString;
+}
+
+public static String reverseWord(String str){
+
+    List<String> chars = str.split('');
+    Integer l = 0;
+    Integer r = chars.size() - 1;
+    String reverseString = '';
+    while (l < r){
+        String temp = chars.get(l);
+        chars.set(l, chars.get(r));
+        chars.set(r, temp);
+        l++;
+        r--;
+    }
+    for (String character : chars){
+        reverseString += character;
+    }
+    return reverseString;
+}
+*/
