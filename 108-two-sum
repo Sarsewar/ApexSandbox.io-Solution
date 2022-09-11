@@ -1,0 +1,15 @@
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+     //code here
+     Map<Integer,Integer> hash = new Map<Integer,Integer>();
+     List<Integer> res = new List<Integer>();
+     for(Integer  i=0;i < nums.size();i++)
+     {
+         if(hash.get(target-nums[i])!= null)
+         {
+            res.add(hash.get(target-nums[i]));
+            res.add(i);
+         }
+         hash.put(nums.get(i),i);
+     }
+     return res;
+}
