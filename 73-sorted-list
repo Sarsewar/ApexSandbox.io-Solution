@@ -1,0 +1,9 @@
+public boolean isSorted(List<Integer> numbers) {
+    //code here
+    Integer l =0, r = numbers.size()-1;
+    Integer n = numbers.size()-1;
+    while(l+1 < n && r > 0 )
+    {
+        if(numbers.get(l) )
+    }
+}
