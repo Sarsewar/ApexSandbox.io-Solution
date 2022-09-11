@@ -1,0 +1,6 @@
+public Integer diff(Integer a, Integer b) {
+    //code here
+    //List<Account> acc = [select id from Account];
+    //system.debug(acc?.size());
+    return Math.abs(a-b);
+}
