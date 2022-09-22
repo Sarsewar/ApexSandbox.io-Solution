@@ -6,7 +6,8 @@ public static Integer longestDistinctSubstring(String str, Integer k){
 
     for(Integer i =;i < str.length();i++)
     {
-        Integer elm = str.charAt(i);
+        
+        Integer count =0;
        
     }
     return max;
