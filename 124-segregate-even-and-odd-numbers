@@ -4,6 +4,8 @@ public static void segregateEvenOdd(List<Integer> numbers){
     
     for(Integer i =0;i < numbers.size();i++)
     {
+        // the curr element is even swap with left pointer.
+        // left pointer always point at odd number
         if(Math.mod(numbers.get(i),2) == 0)
         {
             Integer temp = numbers.get(left);
