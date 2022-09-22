@@ -1,27 +1,24 @@
 public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
     // solution 
-    Integer n = list1.size(), m = list2.size();
-    if(n == 0)
-        return list2;
-    if(m==0)
-        return list1;
-    Integer[] res  = new Integer[n+m];
-
-    Integer i = n-1, j = m-1;
-    Integer k =0;
-    while(k > =0 && (i >=0 || j >=0 ))
-    {
-        if(j >=0 && i>=0 && list2.get(j) >= list1.get(i))
-            res[k--] =  list2.get(j--);
-        else if(i >=0 && j>=0 && list1.get(i) > list2.get(j))
-            res[k--] =  list1.get(i--);
-        else if(j < 0 && i >=0)
-            res[k--] = list1.get(i--);
-        else if(i < 0 && j>=0)
-            res[k--] = list2.get(j--);
+    // solution 
+     List<Integer> result = new List<Integer>();
+    Integer i = 0;
+    Integer j = 0;
+    Integer n = list1.size() -1;
+    Integer m = list2.size() -1;
+    Integer current = 0;
+    while(i <= n && j <= m){
+        if(list1[i] < list2[j]){
+            result.add(list1[i++]);
+        }else {
+            result.add(list2[j++]);
+        }
     }
-    List<Integer> ans = new List<Integer>();
-    for( i =0 ;i < res.size();i++)
-        ans.add(res[i]);
-    return ans;
+    while(i <= n){
+        result.add(list1[i++]);
+    }   
+    while (j <= m) {        
+        result.add(list2[j++]);
+    }
+    return result;
 }
