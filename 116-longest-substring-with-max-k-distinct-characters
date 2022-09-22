@@ -31,6 +31,6 @@ try{
 {
     system.debug(ex.getMessage());
 }
-    return -1;
+    return max;
 
 }
