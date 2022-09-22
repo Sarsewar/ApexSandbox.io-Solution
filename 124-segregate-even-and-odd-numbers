@@ -1,3 +1,15 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     //code here
+    Integer left =0;
+    
+    for(Integer i =0;i < numbers.size();i++)
+    {
+        if(Math.mod(numbers.get(i),2) != 0)
+        {
+            Integer temp = numbers.get(left);
+            numbers.set(left, numbers.get(i));
+            numbers.set(i, temp);
+            left++;
+        }
+    }
 }
