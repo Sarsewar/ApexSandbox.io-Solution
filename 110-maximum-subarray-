@@ -2,7 +2,7 @@ public static Integer maxSubArraySum(List<Integer> nums, Integer target){
 //code here 
     Integer start =0;
     Integer n = nums.size();
-    Integer max = -1e9;
+    Integer max = -1;
     Integer sum =0;
     for(Integer i =0;i < n;i++)
     {
