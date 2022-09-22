@@ -6,9 +6,11 @@ public Boolean isSubSequence(String s1, String s2){
     while(i < n && j < m)
     {
         if(s1.charAt(i) == s2.charAt(j))
-            i++;
+        {
+            i++;j++;
+        }
         while(s1.charAt(i) != s2.charAt(j))
             j++;
     }
-    return i+1  == n;
+    return i+1 == n;
 }
