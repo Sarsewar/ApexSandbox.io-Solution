@@ -8,7 +8,7 @@ public void defragging(Integer[] memory)
       {
           if(memory[i] != -1 )
           {
-              int temp = memory[i];
+              Integer temp = memory[i];
               memory[i] = memory[left];
               memory[left] = temp;
               left++;
