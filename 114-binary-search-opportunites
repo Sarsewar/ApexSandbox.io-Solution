@@ -10,10 +10,10 @@ Integer n = opportunities.size();
             return mid;
         else if(opportunities[mid].amount < target)
         {
-            left= mid+1;
+             right = mid-1;
         }else if(opportunities[mid].amount > target)
         {
-            right = mid-1;
+           left= mid+1;
         }
     }
     return -1;
