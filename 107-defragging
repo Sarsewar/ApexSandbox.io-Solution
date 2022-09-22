@@ -1,0 +1,19 @@
+public void defragging(Integer[] memory)
+{
+    // Code here.
+      int left =0;
+      int i =0;
+      int n = memory.length;
+      while(i < n)
+      {
+          if(memory[i] != -1 )
+          {
+              int temp = memory[i];
+              memory[i] = memory[left];
+              memory[left] = temp;
+              left++;
+          }
+          i++;
+      }
+ 
+}
