@@ -1,6 +1,10 @@
 public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
     // solution 
     Integer n = list1.size(), m = list2.size();
+    if(n == 0)
+        return list2;
+    if(m==0)
+        return list1;
     Integer[] res  = new Integer[n+m];
 
     Integer i = n-1, j = m-1;
@@ -9,7 +13,7 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     {
         if(j >=0 && list2.get(j) > list1.get(i))
             res[k--] =  list2.get(j--);
-        else if(i >=0 && list2.get(i) > list1.get(j))
+        else if(i >=0 && list2.get(i) >= list1.get(j))
             res[k--] =  list2.get(i--);
     }
     List<Integer> ans = new List<Integer>();
