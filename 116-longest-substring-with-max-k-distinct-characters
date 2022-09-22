@@ -4,26 +4,6 @@ public static Integer longestDistinctSubstring(String str, Integer k){
     Integer start =0;
     Map<Integer,Integer> freq = new Map<Integer,Integer>();
 
-    for(Integer i =;i < str.length();i++)
-    {
-        Integer elm = str.charAt(i);
-        Integer count =0;
-        if(freq.get(elm) == null ) {
-            k--;
-        }else {
-            count = freq.get(elm) +1;
-        }
-        freq.put(elm,count);
-        while(k < 0 )
-        {
-            elm = str.charAt(start);
-            count = freq.get(start)-1;
-            start++;
-            freq.put(elm, count);
-            if(count == 0)k++;
-        }
-        max = Math.max(max, i-start+1);
-    }
     return max;
 
 }
