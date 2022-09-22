@@ -7,12 +7,15 @@ public static Integer maxSubArraySum(List<Integer> nums, Integer target){
     for(Integer i =0;i < n;i++)
     {
         sum += nums.get(i);
-        while(sum > target)
+        while(sum >= target)
         {
+            if(sum == target)
+            {
+                 max = Math.max(max, i-start+1);
+            }
             sum -= nums.get(start);
             start++;
         }   
-        max = Math.max(max, i-start+1);
     }
     return max;
 }
