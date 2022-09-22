@@ -8,10 +8,10 @@ Integer n = opportunities.size();
         Integer mid = left+(right-left)/2;
         if(opportunities[mid].amount == target)
             return mid;
-        else if(opportunities[mid] < target)
+        else if(opportunities[mid].amount < target)
         {
             left= mid+1;
-        }else if(opportunities[mid] > target)
+        }else if(opportunities[mid].amount > target)
         {
             right = mid-1;
         }
