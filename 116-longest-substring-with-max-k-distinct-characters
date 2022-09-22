@@ -10,6 +10,7 @@ public static Integer longestDistinctSubstring(String str, Integer k){
         Integer count =0;
         if(freq.get(elm) == null ) {
             k--;
+            count++;
         }else {
             count = freq.get(elm) +1;
         }
