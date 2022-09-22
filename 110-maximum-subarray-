@@ -9,12 +9,12 @@ public static Integer maxSubArraySum(List<Integer> nums, Integer target){
         sum += nums.get(i);
         while(sum >= target)
         {
-            if(sum == target)
-            {
-                 max = Math.max(max, i-start+1);
-            }
             sum -= nums.get(start);
             start++;
+        }
+        if(sum == target)
+        {
+                max = Math.max(max, i-start+1);
         }   
     }
     return max;
