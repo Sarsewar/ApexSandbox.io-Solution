@@ -3,7 +3,7 @@ public void defragging(Integer[] memory)
     // Code here.
       Integer left =0;
       Integer i =0;
-      Integer n = memory.length;
+      Integer n = memory.length();
       while(i < n)
       {
           if(memory[i] != -1 )
