@@ -10,6 +10,7 @@ public static Integer maxSubArraySum(List<Integer> nums, Integer target){
         while(sum > target)
         {
             sum -= nums.get(start);
+            if(sum<0) sum = 0;
             start++;
         }
         max = Math.max(max, i-start+1);
