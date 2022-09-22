@@ -8,9 +8,7 @@ public static Integer longestDistinctSubstring(String str, Integer k){
     {
         Integer elm = str.charAt(i);
         Integer count =0;
-        if(freq.get(elm) == null ) {
-            k--;
-        }
+       
         max = Math.max(max, i-start+1);
     }
     return max;
