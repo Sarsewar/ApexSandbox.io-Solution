@@ -4,7 +4,7 @@ public static Integer longestDistinctSubstring(String str, Integer k){
     Integer start =0;
     Map<Integer,Integer> freq = new Map<Integer,Integer>();
 
-    for(Integer i =0;i < str.size();i++)
+    for(Integer i =0;i < str.length();i++)
     {
         Integer elm = str.charAt(i);
         Integer count =0;
