@@ -10,7 +10,6 @@ public List<String> commonChars(List<String> strs){
             count[i] =0;
         for(Integer i =0 ;i < s.length();i++)
         {
-
             count[s.charAt(i) - 'a'.charAt(0)]++;
         }
         for(Integer i =0 ;i < 26;i++){
@@ -18,13 +17,6 @@ public List<String> commonChars(List<String> strs){
         }
     }
     List<String> res = new List<String>();
-    for(Integer i =0 ;i < 26;i++){
-        Integer c = alpha[i];
-        while(c > 0){
-            //String convertedChar = '';//String.fromCharArray(new Integer[]});
-            //res.add(convertedChar);
-            c--;
-        }
-    }
+    
     return  res;
 }
