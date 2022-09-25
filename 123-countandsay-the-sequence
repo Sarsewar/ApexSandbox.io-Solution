@@ -9,16 +9,19 @@ public string countAndSay(integer N) {
 
 
 public String process(String s){
-    String res = '';
+    
     if (String.isEmpty(s))
         return '1';
+
+    String res = '';
+
     Integer i = 0;
     Integer n = s.length();
     List<String> sp = s.split('');
     while (i < n){
         Integer j = i + 1;
         Integer count = 1;
-        while (j < n && s.charAt(j - 1) == s.charAt(j)){
+        while (j < n && sp.get(j - 1) == sp.get(j)){
             count++;
             j++;
         }
