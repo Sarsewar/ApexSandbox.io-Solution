@@ -6,7 +6,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
     {
         // the curr element at window_end is even swap with left pointer.
         // left pointer always point at odd number
-        Boolean isNumberEven = Math.mod(numbers.get(i),2) == 0 ? true : false;
+        Boolean isNumberEven = Math.mod(numbers.get(window_end),2) == 0 ? true : false;
         if(isNumberEven)
         {
             Integer temp = numbers.get(window_left);
