@@ -1,0 +1,25 @@
+public List<String> commonChars(List<String> strs){
+    //solution here 
+    Integer[] alpha = new Integer[26];
+    
+    for(String s : strs)
+    {
+        Integer[] count = new Integer[26];
+        for(Integer i =0 ;i < s.size();i++)
+        {
+            count[s.charAt(i) - 'a'.charAt(0)]++;
+        }
+        for(Integer i =0 ;i < 26;i++){
+            alpha = Math.min(alpha[i], count[i]);
+        }
+    }
+    List<Integer> res = new List<Integer>();
+    for(Integer i =0 ;i < 26;i++){
+        int c = alpha[i];
+        while(c > 0){
+            res.add(i + 'a'.charAt(0));
+            c--;
+        }
+    }
+    return  String.fromCharArray(res);
+}
