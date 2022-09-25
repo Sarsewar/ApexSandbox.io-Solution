@@ -13,13 +13,13 @@ public List<String> commonChars(List<String> strs){
             alpha[i] = Math.min(alpha[i], count[i]);
         }
     }
-    List<Integer> res = new List<Integer>();
+    List<String> res = new List<String>();
     for(Integer i =0 ;i < 26;i++){
         Integer c = alpha[i];
         while(c > 0){
-            res.add(i + 'a'.charAt(0));
+            res.add((char)(i + 'a'.charAt(0))+"");
             c--;
         }
     }
-    return  String.fromCharArray(res);
+    return  res;
 }
