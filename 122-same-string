@@ -1,0 +1,23 @@
+public static Boolean sameString(String str1, String str2){
+    // solution
+
+    Integer n = str1.length(), m =str2.length();
+    Integer i =n-1, j=m-1;
+    List<String> sp1 = str1.split('');
+    List<String> sp2 = str2.split('');
+    while(i >= 0 && j >=0 )
+    {
+        while(j >=0 && sp2.get(j)=='#'){
+            j-=2;
+        }
+        while(i >=0 && sp2.get(i)=='#'){
+            i-=2;
+        }
+        if(sp1.get(i) != '#' && sp2.get(j) !='#' && sp1.get(i) == sp2.get(j))
+        {
+            i--; j--;
+        }
+    }
+    if(j > 0 || i > 0) return false;
+    return true;
+}
