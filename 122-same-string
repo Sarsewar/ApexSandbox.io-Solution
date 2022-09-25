@@ -17,7 +17,7 @@ public static Boolean sameString(String str1, String str2){
         {
             return false;
         }
-        
+        i--; j--;
     }
     if(j > 0 || i > 0) return false;
     return true;
