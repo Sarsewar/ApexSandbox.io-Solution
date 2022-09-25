@@ -6,12 +6,10 @@ public static Boolean sameString(String str1, String str2){
 }
 
 public static String process(String s){
-    String res = '';
     List<String> sp = s.split('');
-    Integer i = 0;
-    Integer n = sp.size();
-    Integer count = 0;
-    i = n - 1;
+    String res = '';
+    Integer i = 0, count = 0;
+    i = sp.size() - 1;
     while (i >= 0){
         if (sp.get(i) == '#'){
             count++;
