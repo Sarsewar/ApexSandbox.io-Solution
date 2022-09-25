@@ -25,6 +25,7 @@ public static String process(String s){
     while (i >= 0){
         if (sp.get(i) == '#')
             count++;
+        i--;
     }
     while (i >= 0){
 
