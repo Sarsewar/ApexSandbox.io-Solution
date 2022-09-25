@@ -17,7 +17,8 @@ public List<String> commonChars(List<String> strs){
     for(Integer i =0 ;i < 26;i++){
         Integer c = alpha[i];
         while(c > 0){
-            res.add(i + 'a'.charAt(0));
+            Character a = i + 'a'.charAt(0);
+            res.add(a+'');
             c--;
         }
     }
