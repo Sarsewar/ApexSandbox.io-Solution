@@ -29,10 +29,12 @@ public static String process(String s){
     }
     while (i >= 0){
 
-        if (count > 0 && sp.get(i) != '#')
-            count--;
-        else
-            res += sp.get(i);
+        if(sp.get(i) != '#'){
+            if (count > 0 )
+                count--;
+            else
+                res += sp.get(i);
+        }
         System.debug('Result::' + res);
         i--;
     }
