@@ -14,25 +14,23 @@ public static Boolean sameString(String str1, String str2){
     return true;
 }
 
+
 public static String process(String s){
     String res = '';
     List<String> sp = s.split('');
     Integer i = 0;
     Integer n = sp.size();
-    System.debug(sp);
+    Integer count = 0;
     i = n - 1;
     while (i >= 0){
-        Integer count = 0;
-        while (i >= 0 && sp.get(i) == '#'){
-            i--;
+        if (sp.get(i) == '#')
             count++;
-        }
-        // while (i >= 0 && count > 0){
-        //     i--;
-        //     count--;
-        // }
-        i -= count;
-        if (i >= 0)
+    }
+    while (i >= 0){
+
+        if (count > 0 && sp.get(i) != '#')
+            count--;
+        else
             res += sp.get(i);
         System.debug('Result::' + res);
         i--;
