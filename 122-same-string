@@ -2,7 +2,7 @@ public static Boolean sameString(String str1, String str2){
     // solution
     str1 = process(str1);
     str2 = process(str2);
-    Integer n = str1.length() - 1, m = str2.length() - 1;
+    /*Integer n = str1.length() - 1, m = str2.length() - 1;
     if (n != m)
         return false;
     Integer i = n - 1, j = m - 1;
@@ -11,8 +11,8 @@ public static Boolean sameString(String str1, String str2){
             return false;
         i--;
         j--;
-    }
-    return true;
+    }*/
+    return str1.equals(str2);
 }
 
 public static String process(String s){
