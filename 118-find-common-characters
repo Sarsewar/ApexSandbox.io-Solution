@@ -1,12 +1,16 @@
 public List<String> commonChars(List<String> strs){
     //solution here 
     Integer[] alpha = new Integer[26];
-    
+    for(Integer i =0 ;i <26;i++)
+        alpha[i] =0;
     for(String s : strs)
     {
         Integer[] count = new Integer[26];
+        for(Integer i =0 ;i <26;i++)
+            count[i] =0;
         for(Integer i =0 ;i < s.length();i++)
         {
+
             count[s.charAt(i) - 'a'.charAt(0)]++;
         }
         for(Integer i =0 ;i < 26;i++){
