@@ -2,16 +2,6 @@ public static Boolean sameString(String str1, String str2){
     // solution
     str1 = process(str1);
     str2 = process(str2);
-    /*Integer n = str1.length() - 1, m = str2.length() - 1;
-    if (n != m)
-        return false;
-    Integer i = n - 1, j = m - 1;
-    while (i >= 0 && j >= 0){
-        if (str1.charAt(i) != str2.charAt(j))
-            return false;
-        i--;
-        j--;
-    }*/
     return str1.equals(str2);
 }
 
@@ -23,17 +13,11 @@ public static String process(String s){
     Integer count = 0;
     i = n - 1;
     while (i >= 0){
-
         if (sp.get(i) == '#'){
             count++;
-        } else{
-
-            if (count > 0)
-                count--;
-            else
-                res += sp.get(i);
-        }
-        System.debug('Result::' + res);
+        } else if (count > 0){
+            count--;
+        }else res += sp.get(i);
         i--;
     }
     return res;
