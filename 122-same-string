@@ -1,19 +1,41 @@
 public static Boolean sameString(String str1, String str2){
     // solution
+    str1 = process(str1);
+    str2 = process(str2);
+    Integer n = str1.length()-1, m = str2.length()-1;
+    if(n != m) return false;
+    Integer i = n-1, j =m-1;
+    while(i >=0 && j >=0)
+    {
+        if(str1.charAt(i) != str2.charAt(j))
+            return false;
+        i--;j--;
+    }
     return true;
 }
+
 public static String process(String s){
-    String res='';
+    String res = '';
     List<String> sp = s.split('');
     Integer i = 0;
     Integer n = sp.size();
-    i=n-1;
-    while(i >= 0){
-        Integer j=i;
-        while(j >=0 && sp.get(i) == '#')
-            j--;
-        i=j;
-        if(i>=0) res+=sp.get(i);
+    System.debug(sp);
+    i = n - 1;
+    while (i >= 0){
+        Integer count = 0;
+        while (i >= 0 && sp.get(i) == '#'){
+            i--;
+            count++;
+        }
+        // while (i >= 0 && count > 0){
+        //     i--;
+        //     count--;
+        // }
+        i -= count;
+        if (i >= 0)
+            res += sp.get(i);
+        System.debug('Result::' + res);
+        i--;
     }
     return res;
 }
