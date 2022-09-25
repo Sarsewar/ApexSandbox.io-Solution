@@ -10,7 +10,7 @@ public static Boolean sameString(String str1, String str2){
         while(j >=0 && sp2.get(j)=='#'){
             j-=2;
         }
-        while(i >=0 && sp2.get(i)=='#'){
+        while(i >=0 && sp1.get(i)=='#'){
             i-=2;
         }
         if(sp1.get(i) != '#' && sp2.get(j) !='#' && sp1.get(i) == sp2.get(j))
