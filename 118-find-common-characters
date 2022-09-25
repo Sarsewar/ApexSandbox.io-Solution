@@ -5,7 +5,7 @@ public List<String> commonChars(List<String> strs){
     for(String s : strs)
     {
         Integer[] count = new Integer[26];
-        for(Integer i =0 ;i < s.size();i++)
+        for(Integer i =0 ;i < s.length();i++)
         {
             count[s.charAt(i) - 'a'.charAt(0)]++;
         }
