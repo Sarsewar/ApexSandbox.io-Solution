@@ -1,17 +1,18 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     //code here
-    Integer left =0;
+    Integer window_left =0;
     
-    for(Integer i =0;i < numbers.size();i++)
+    for(Integer window_end =0;window_end < numbers.size();window_end++)
     {
-        // the curr element is even swap with left pointer.
+        // the curr element at window_end is even swap with left pointer.
         // left pointer always point at odd number
-        if(Math.mod(numbers.get(i),2) == 0)
+        Boolean isNumberEven = Math.mod(numbers.get(i),2) == 0 ? true : false;
+        if(isNumberEven)
         {
-            Integer temp = numbers.get(left);
-            numbers.set(left, numbers.get(i));
-            numbers.set(i, temp);
-            left++;
+            Integer temp = numbers.get(window_left);
+            numbers.set(window_left, numbers.get(window_end));
+            numbers.set(window_end, temp);
+            window_left++;
         }
     }
 }
