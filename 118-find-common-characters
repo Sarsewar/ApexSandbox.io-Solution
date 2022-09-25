@@ -10,7 +10,7 @@ public List<String> commonChars(List<String> strs){
             count[i] =0;
         for(Integer i =0 ;i < s.length();i++)
         {
-            count[s.charAt(i) - 'a'.charAt(0)]++;
+            count[s.charAt(i) - 'a'.charAt(0)] =count[s.charAt(i) - 'a'.charAt(0)]+1 ;
         }
         for(Integer i =0 ;i < 26;i++){
             alpha[i] = Math.min(alpha[i], count[i]);
