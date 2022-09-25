@@ -1,25 +1,29 @@
 public List<String> commonChars(List<String> strs){
     //solution here 
-    Integer[] alpha = new Integer[26];
+    Integer[] listCount = new Integer[26];
+    for(Integer i =0;i < 26;i++)
+        listCount[i]=0;
     
-    for(Integer i =0 ;i <26;i++)
-        alpha[i] =0;
+    for(String s : strs){
 
-    for(String s : strs)
-    {
-        Integer[] count = new Integer[26];
-        for(Integer i =0 ;i <26;i++)
-            count[i] =0;
-    
-        for(Integer i =0 ;i < s.length();i++)
+        Integer[] wordCount = new Integer[26];
+        for(Integer i =0;i < 26;i++)
+            wordCount[i]=0;
+        for(Integer i =0;i < s.length();i++)
         {
-           // count[s.charAt(i) - 97] =count[s.charAt(i) - 97]+1 ;
+            wordCount[s.charAt(i)-97]++;
         }
-        for(Integer i =0 ;i < 26;i++){
-            alpha[i] = Math.min(alpha[i], count[i]);
-        }
+        for(Integer i =0;i < 26;i++)
+            listCount[i]= Math.min(listCount[i],wordCount[i]);
     }
     List<String> res = new List<String>();
-    
-    return  res;
+    for(Integer i =0;i < 26;i++){
+        Integer count = listCount[i];
+        while(count >0){
+            count--;
+            String myChar = String.fromCharArray( new List<integer> { i+97 } );
+            res.add(myChar);
+        }
+    }
+    return res;
 }
