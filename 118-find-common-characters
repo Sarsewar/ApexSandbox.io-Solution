@@ -17,7 +17,7 @@ public List<String> commonChars(List<String> strs){
     for(Integer i =0 ;i < 26;i++){
         Integer c = alpha[i];
         while(c > 0){
-            Integer asc= i + 'a'.charAt(0);
+            Integer asc= (i + 'a'.charAt(0));
             List<Integer> charArr= new Integer[]{asc};
             String convertedChar = String.fromCharArray(charArr);
             res.add(convertedChar);
