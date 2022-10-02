@@ -10,7 +10,7 @@ public class Stack {
         //implement pop
         if(stack.size() == 0)
             return -1;
-        int remove = stack.get(stack.size()-1);
+        Integer remove = stack.get(stack.size()-1);
         stack.remove(remove);
         return remove;
     }
@@ -27,6 +27,6 @@ public class Stack {
     
     public Boolean isEmpty() {
         //implement isEmpty
-        return size == 0 ? true : false;
+        return stack.size() == 0 ? true : false;
     }
 }
