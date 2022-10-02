@@ -1,4 +1,5 @@
 public class Stack {
+    
     List<Object> stack = new List<Object>();
     public void push(Object obj) {
         //implement push
@@ -7,11 +8,9 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        if(stack.size() == 0)
-            return -1;
-        Integer remove = (Integer)stack.get(stack.size()-1);
-        stack.remove(remove);
-        return remove;
+        if(stack.isEmpty())
+            return null;
+        return stack.remove(stack.size()-1);
     }
     
     public Integer size() {
@@ -26,6 +25,6 @@ public class Stack {
     
     public Boolean isEmpty() {
         //implement isEmpty
-        return stack.size() == 0 ? true : false;
+        return stack.isEmpty();
     }
 }
